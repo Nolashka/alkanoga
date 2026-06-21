@@ -1,1 +1,263 @@
+margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Desplazamiento fluido activado */
+    scroll-behavior: smooth;
+}
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #faf8f5;
+    color: #3d3d3d;
+    background-color: #fffaf5; /* Blanco cálido / Anaranjado muy suave */
+    padding: 0;
+}
+
+@@ -20,45 +20,59 @@ body {
+}
+
+.text-center { text-align: center; }
+.bg-light { background-color: #f0eae4; }
+.bg-light { background-color: #ffe6d5; } /* Anaranjado suave de fondo */
+
+h1, h2, h3, h4 {
+    color: #4a2818;
+    color: #e65c00; /* Anaranjado fuerte para títulos */
+}
+
+.btn-primary, .btn-secondary, .btn-card {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 4px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Botones principales en Verde */
+.btn-primary {
+    background-color: #2e6f40;
+    background-color: #2a9d8f;
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #227c71;
+}
+
+/* Botones secundarios en Azul */
+.btn-secondary {
+    background-color: #bc6c25;
+    background-color: #264653;
+    color: #ffffff;
+}
+.btn-secondary:hover {
+    background-color: #1a313b;
+}
+
+/* Botones de tarjetas en Azul */
+.btn-card {
+    background-color: #4a2818;
+    background-color: #457b9d;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+}
+.btn-card:hover {
+    background-color: #345d78;
+}
+
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(230, 92, 0, 0.1);
+    padding: 15px 0;
+    position: sticky; /* Se queda fijo arriba para que el menú siempre esté visible */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #ffb380; /* Adorno anaranjado */
+}
+
+.main-header .container {
+@@ -73,31 +87,31 @@ h1, h2, h3, h4 {
+}
+.logo a {
+    text-decoration: none;
+    color: #4a2818;
+    color: #e65c00;
+}
+.logo span { color: #2e6f40; }
+.logo span { color: #2a9d8f; } /* Toque verde en el logo */
+
+.main-nav a {
+    text-decoration: none;
+    color: #555555;
+    color: #666666;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: #2e6f40;
+    color: #e65c00;
+}
+
+.hero {
+    background-color: #4a2818;
+    background: linear-gradient(135deg, #e65c00 0%, #ff944d 100%); /* Degradado Anaranjado */
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h2 { color: #ffffff; font-size: 2.3rem; margin-bottom: 15px; }
+.hero p { max-width: 700px; margin: 0 auto 25px auto; }
+.hero p { max-width: 700px; margin: 0 auto 25px auto; color: #ffffff; }
+
+.inner-section, .directory-section, .collab-section {
+    padding: 60px 0;
+@@ -107,13 +121,25 @@ h1, h2, h3, h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Adorno debajo de los títulos */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #2a9d8f; /* Adorno Verde */
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-top: -30px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    color: #666;
+    color: #777;
+}
+
+.grid-directory, .grid-stories {
+@@ -125,15 +151,20 @@ h1, h2, h3, h4 {
+.card, .story-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(230, 92, 0, 0.05);
+    position: relative;
+    border: 1px solid #eaddcf;
+    border: 1px solid #ffe0cc; /* Contorno anaranjado muy suave */
+    padding: 25px;
+}
+
+/* Contorno especial decorativo para destacar */
+.card-active {
+    border-top: 4px solid #2a9d8f; /* Borde superior Verde */
+}
+
+.location-tag {
+    font-size: 0.9rem;
+    color: #bc6c25;
+    color: #457b9d; /* Azul para ubicaciones */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+@@ -152,30 +183,31 @@ h1, h2, h3, h4 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 4px 10px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.badge-success { background-color: #2e6f40; }
+.badge-pending { background-color: #999999; }
+.badge-success { background-color: #2a9d8f; } /* Verde */
+.badge-pending { background-color: #a8dadc; color: #1d3557; } /* Azul claro */
+
+.card-disabled {
+    opacity: 0.8;
+    background-color: #fcfbfa;
+    opacity: 0.7;
+    background-color: #fdfdfd;
+}
+
+.story-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid #457b9d; /* Adorno inferior Azul */
+}
+
+.story-img-placeholder {
+    font-size: 3rem;
+    background-color: #f0eae4;
+    background-color: #ffe6d5;
+    width: 80px;
+    height: 80px;
+    display: flex;
+@@ -196,12 +228,11 @@ h1, h2, h3, h4 {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    border-left: 5px solid #bc6c25;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    border-left: 5px solid #2a9d8f; /* Adorno lateral Verde */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.bank-card h4 { margin-bottom: 10px; color: #bc6c25; }
+.bank-name { font-weight: bold; margin-bottom: 5px; }
+.bank-card h4 { margin-bottom: 10px; color: #2a9d8f; }
+
+.grid-info {
+    display: grid;
+@@ -210,18 +241,28 @@ h1, h2, h3, h4 {
+}
+
+.schedule-box { 
+    background-color: #f0eae4; 
+    background-color: #ffe6d5; /* Fondo anaranjado suave */
+    padding: 20px; 
+    border-radius: 6px; 
+    margin: 15px 0;
+    border: 1px dashed #e65c00;
+}
+.schedule-box ul { list-style: none; }
+.schedule-box li { margin-bottom: 8px; }
+
+.note { font-size: 0.85rem; color: #666; }
+.map-container { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+.main-footer { background-color: #221109; color: #b5a49c; padding: 30px 0; text-align: center; font-size: 0.9rem; }
+/* Lista de necesidades del asilo */
+.needs-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.needs-list li {
+    margin-bottom: 6px;
+}
+
+.main-footer { background-color: #331400; color: #ffebcc; padding: 30px 0; text-align: center; font-size: 0.9rem; }
+.main-footer p { margin-bottom: 5px; }
+.back-link { color: #bc6c25; text-decoration: none; font-weight: bold; }
+.back-link { color: #ff944d; text-decoration: none; font-weight: bold; }
+.back-link:hover { text-decoration: underline; }
